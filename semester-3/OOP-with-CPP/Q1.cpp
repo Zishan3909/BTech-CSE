@@ -17,6 +17,6 @@ int main() {
     cout << "x=" << Name1::x << endl;
     cout << "m (Name1::m)=" << Name1::m << endl;
     cout << "y=" << Name1::Name2::y << endl;
-    cout << "m (anonymous)=" << m << endl;
+    cout << "m (anonymous)= " << m << endl;
     return 0;
 }
