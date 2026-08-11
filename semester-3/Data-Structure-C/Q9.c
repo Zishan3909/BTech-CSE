@@ -4,22 +4,48 @@
 
 #define MAX 100
 
-void reverseString(char *str)
-{
-    char stack[MAX];
-    int top = -1;
-    int len = strlen(str);
+char stack[MAX];
+int top = -1;
 
-    // Push all characters onto the stack
-    for (int i = 0; i < len; i++)
+// Push an element into the stack
+void push(char ch)
+{
+    if (top == MAX - 1)
     {
-        stack[++top] = str[i];
+        printf("Stack Overflow\n");
+        return;
     }
 
-    // Pop all characters from the stack and store them back in the string
+    stack[++top] = ch;
+}
+
+// Pop an element from the stack
+char pop()
+{
+    if (top == -1)
+    {
+        printf("Stack Underflow\n");
+        return '\0';
+    }
+
+    return stack[top--];
+}
+
+// Reverse string using stack
+void reverseString(char *str)
+{
+    int len = strlen(str);
+
+    // Push all characters into stack
     for (int i = 0; i < len; i++)
     {
-        str[i] = stack[top--];
+        push(str[i]);
+    }
+
+    // Pop characters and put them back into string
+    for (int i = 0; i < len; i++)
+    {
+        str[i] = pop();
     }
 }
 
