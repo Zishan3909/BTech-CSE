@@ -1,0 +1,5 @@
+# Ignore compiled binaries and build outputs
+semester-3/*/output/
+*.exe
+*.o
+*.obj
