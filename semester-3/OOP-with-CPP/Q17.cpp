@@ -7,6 +7,7 @@ class A {
     void run();
 public:
     void show();
+    
 };
 
 void A::run() {
