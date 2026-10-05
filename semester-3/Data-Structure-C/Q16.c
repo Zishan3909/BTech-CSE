@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure for a node
+
 struct Node {
     int data;
     struct Node *next;
@@ -17,7 +17,7 @@ int main() {
     printf("Enter number of nodes: ");
     scanf("%d", &n);
 
-    // Create linked list
+  
     for (i = 0; i < n; i++) {
         newNode = (struct Node*)malloc(sizeof(struct Node));
 
@@ -39,7 +39,7 @@ int main() {
         }
     }
 
-    // Display linked list
+  
     printf("\nLinked List: ");
 
     temp = head;
@@ -48,8 +48,6 @@ int main() {
         printf("%d -> ", temp->data);
         temp = temp->next;
     }
-
     printf("NULL");
-
     return 0;
 }
